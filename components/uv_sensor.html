@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasonic Sensor HC-SR04 - Components</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ultrasonic Sensor - HC-SR04</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html#components">Components</a></li>
+                <li><a href="../index.html#team-members">Team</a></li>
+                <li><a href="../index.html#project-overview">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Ultrasonic Sensor - HC-SR04 🦸‍♂️🔊</h2>
+            <img src="../assets/uv_sensor.jpg" alt="Ultrasonic Sensor HC-SR04" style="width:140px;height:auto;display:block;margin:16px 0;">
+            <p>
+                The HC-SR04 is a widely used ultrasonic sensor that measures distances by using ultrasonic sound waves. It’s a popular sensor in robotics, automation, and DIY electronics due to its accuracy, simplicity, and low cost. It measures distance by emitting a sound wave and measuring the time it takes for the echo to return.
+            </p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>
+                    <strong>Distance Measurement 📏:</strong><br>
+                    The HC-SR04 ultrasonic sensor can measure distances ranging from 2 cm to 400 cm with a high degree of accuracy. This makes it perfect for applications like distance sensing, obstacle detection, and proximity sensing.
+                </li>
+                <li>
+                    <strong>Two Components 🔄:</strong><br>
+                    The sensor consists of two main components:<br>
+                    <strong>Transmitter:</strong> Emits the ultrasonic pulse.<br>
+                    <strong>Receiver:</strong> Receives the reflected pulse (echo).
+                </li>
+                <li>
+                    <strong>Working Principle ⚙️:</strong><br>
+                    The sensor emits an ultrasonic sound wave at a frequency of 40 kHz. When the sound wave hits an object, it bounces back toward the sensor, and the echo time is measured. The distance is then calculated based on the time it took for the echo to return.
+                </li>
+                <li>
+                    <strong>Simple Interface 🔌:</strong><br>
+                    The HC-SR04 sensor is easy to interface with a microcontroller (like Arduino) using just four pins:<br>
+                    VCC: Power input (usually 5V).<br>
+                    Trig: Trigger pin to initiate the measurement.<br>
+                    Echo: Receives the pulse’s return time.<br>
+                    GND: Ground pin.
+                </li>
+                <li>
+                    <strong>Low Power Consumption ⚡:</strong><br>
+                    The HC-SR04 sensor is energy-efficient, making it ideal for battery-powered projects like robots, drones, or automatic measurement systems.
+                </li>
+            </ul>
+            <h3>How It Works ⚙️:</h3>
+            <p>
+                <strong>Triggering:</strong> To begin a distance measurement, you send a 10-microsecond pulse to the Trig pin. This triggers the sensor to emit an ultrasonic pulse.<br><br>
+                <strong>Echo Reception:</strong> The sensor emits the ultrasonic sound wave, which travels through the air. When the wave encounters an object, it bounces back, and the Echo pin receives the signal.<br><br>
+                <strong>Time Calculation:</strong> The time taken for the pulse to travel from the sensor to the object and back is recorded. Since the speed of sound is known (approximately 343 meters per second in air at room temperature), the distance can be calculated using the formula:<br>
+                <code>Distance = (Time × Speed of Sound) / 2</code><br>
+                The division by 2 accounts for the fact that the sound travels to the object and back.
+            </p>
+            <h3>Common Uses 🔧:</h3>
+            <ul>
+                <li>
+                    <strong>Obstacle Detection in Robotics 🤖:</strong><br>
+                    In autonomous robots or vehicles, the HC-SR04 sensor is used for detecting obstacles and avoiding collisions. It helps the robot navigate around objects by measuring the distance to surrounding obstacles.
+                </li>
+                <li>
+                    <strong>Distance Measurement 📏:</strong><br>
+                    The HC-SR04 sensor is used in a variety of distance-measuring applications, such as automatic door opening systems, liquid level sensors, or measuring the height of objects in a controlled environment.
+                </li>
+                <li>
+                    <strong>Proximity Sensors 🚶‍♂️:</strong><br>
+                    It’s commonly used in proximity sensing applications like parking sensors in cars, where the sensor detects the distance between a vehicle and an obstacle.
+                </li>
+                <li>
+                    <strong>Object Counting and Presence Detection 📦:</strong><br>
+                    In industrial or commercial applications, it’s used to detect the presence or count the number of objects passing through a sensing area by measuring the distance to objects.
+                </li>
+                <li>
+                    <strong>Drone Altitude Sensing 🚁:</strong><br>
+                    The HC-SR04 is used in drones to measure altitude by calculating the distance between the drone and the ground or other surfaces.
+                </li>
+            </ul>
+            <h3>Advantages ✅:</h3>
+            <ul>
+                <li>
+                    <strong>Affordable 💰:</strong> The HC-SR04 is one of the most cost-effective ultrasonic sensors available, making it perfect for hobbyists and makers on a budget.
+                </li>
+                <li>
+                    <strong>High Accuracy 🎯:</strong> It provides accurate distance measurements with minimal error, ideal for precise distance sensing in various projects.
+                </li>
+                <li>
+                    <strong>Easy to Interface 🖥️:</strong> With just four pins and simple control via microcontrollers like Arduino, it's beginner-friendly and easy to integrate into projects.
+                </li>
+                <li>
+                    <strong>Non-contact Measurement ✋:</strong> The sensor doesn’t require physical contact with the object being measured, which can be useful in applications where physical interaction with the object is not desired (e.g., measuring moving objects).
+                </li>
+                <li>
+                    <strong>Versatile 🔄:</strong> The HC-SR04 sensor can be used in a wide range of projects, from robotics and automation to sensing applications like parking assist systems and altitude measurement.
+                </li>
+            </ul>
+            <h3>Limitations 🚫:</h3>
+            <ul>
+                <li>
+                    <strong>Limited Range 📏:</strong> The HC-SR04 sensor has a maximum range of 400 cm, which may not be suitable for long-distance measurements. It’s best suited for short-range applications.
+                </li>
+                <li>
+                    <strong>Environmental Factors 🌡️:</strong> The accuracy of the sensor can be affected by environmental factors, such as temperature, humidity, or air pressure, since the speed of sound can vary with these conditions.
+                </li>
+                <li>
+                    <strong>Angle Sensitivity 🔄:</strong> The sensor has a narrow beam angle, which means it’s most effective when the object is directly in front of it. It may not work as well for objects at an angle to the sensor.
+                </li>
+            </ul>
+            <h3>Conclusion 🏁:</h3>
+            <p>
+                The HC-SR04 ultrasonic sensor is an excellent tool for measuring distances in a wide variety of applications. Its affordability, accuracy, and ease of use make it a top choice for projects involving robotics, automation, and proximity sensing. Whether you're building a robot, measuring distances, or detecting obstacles, the HC-SR04 offers a simple yet effective solution.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Automatic Hand Sanitizer Dispenser. All rights reserved.</p>
+    </footer>
+</body>
+</html>

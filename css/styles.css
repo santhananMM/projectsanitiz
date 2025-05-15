@@ -244,3 +244,55 @@ footer {
     background: none;
     margin-top: 32px;
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 700px) {
+    /* Make headings slightly smaller for mobile */
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+        padding-left: 8px;
+    }
+
+    /* Adjust section padding and width */
+    section {
+        padding: 12px;
+        max-width: 98vw;
+    }
+
+    /* Components gallery: smaller cards and images */
+    .components-gallery {
+        gap: 12px;
+    }
+    .component-card {
+        width: 110px;
+        padding: 10px 4px;
+    }
+    .component-card img {
+        width: 48px;
+        height: 48px;
+    }
+    .component-card p {
+        font-size: 0.92rem;
+    }
+
+    /* Team member images: smaller for mobile */
+    .team-member img {
+        width: 60px;
+        height: 80px;
+    }
+    .team-members-list {
+        gap: 10px;
+    }
+    .team-member {
+        margin: 0 8px;
+    }
+
+    /* Navigation: stack vertically if needed */
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

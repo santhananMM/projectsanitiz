@@ -37,6 +37,11 @@ header h1 {
     letter-spacing: 1px;
 }
 
+/* Hide the default nav menu */
+header nav {
+    display: none;
+}
+
 /* Navigation styles */
 nav ul {
     display: flex;
@@ -72,17 +77,130 @@ nav ul li a:hover {
     font-size: 2rem;
     color: #065fd4;
     cursor: pointer;
-    display: none; /* Hide on desktop, show on mobile */
     z-index: 1100;
+    display: block;
 }
 
 @media (max-width: 700px) {
-    nav ul {
-        display: none;
+    body {
+        padding-top: 64px;
     }
-    .menu-btn {
-        display: block;
+    header h1 {
+        font-size: 1.1rem;
+        padding: 12px 12px 0 12px;
     }
+    section {
+        padding: 12px;
+        max-width: 100vw;
+        margin: 12px 0;
+    }
+    h2 {
+        font-size: 1rem;
+        padding-left: 8px;
+        margin-bottom: 10px;
+    }
+    .components-gallery {
+        gap: 10px;
+    }
+    .component-card {
+        width: 90px;
+        padding: 8px 2px;
+    }
+    .component-card img {
+        width: 38px;
+        height: 38px;
+    }
+    .component-card p {
+        font-size: 0.85rem;
+    }
+    .team-member img {
+        width: 48px;
+        height: 64px;
+    }
+    .team-members-list {
+        gap: 8px;
+    }
+    .team-member {
+        margin: 0 4px;
+    }
+    .side-menu {
+        right: 8px;
+        top: 8px;
+        border-radius: 6px;
+        padding: 0;
+    }
+    .side-menu ul {
+        gap: 8px;
+        padding: 6px 8px;
+    }
+    .side-menu a {
+        font-size: 0.95rem;
+        padding: 3px 6px;
+    }
+    .button {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+    .team-list {
+        gap: 10px;
+    }
+    .component-item {
+        padding: 10px;
+        min-width: 120px;
+    }
+    iframe {
+        width: 98vw !important;
+        height: 180px !important;
+    }
+    footer {
+        padding: 16px 0 8px 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Side menu styles */
+.side-menu {
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    width: auto;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    z-index: 2000;
+    border-radius: 8px;
+    padding: 0;
+    display: none;
+    transition: opacity 0.2s;
+}
+.side-menu.open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+}
+.side-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 0;
+    padding: 8px 16px;
+    list-style: none;
+}
+.side-menu li {
+    margin: 0;
+}
+.side-menu a {
+    color: #065fd4;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.15s;
+}
+.side-menu a:hover {
+    background: #f0f4fa;
 }
 
 /* Section styles */
@@ -243,56 +361,4 @@ footer {
     font-size: 0.95rem;
     background: none;
     margin-top: 32px;
-}
-
-/* Responsive adjustments for mobile devices */
-@media (max-width: 700px) {
-    /* Make headings slightly smaller for mobile */
-    h1 {
-        font-size: 1.4rem;
-    }
-    h2 {
-        font-size: 1.1rem;
-        padding-left: 8px;
-    }
-
-    /* Adjust section padding and width */
-    section {
-        padding: 12px;
-        max-width: 98vw;
-    }
-
-    /* Components gallery: smaller cards and images */
-    .components-gallery {
-        gap: 12px;
-    }
-    .component-card {
-        width: 110px;
-        padding: 10px 4px;
-    }
-    .component-card img {
-        width: 48px;
-        height: 48px;
-    }
-    .component-card p {
-        font-size: 0.92rem;
-    }
-
-    /* Team member images: smaller for mobile */
-    .team-member img {
-        width: 60px;
-        height: 80px;
-    }
-    .team-members-list {
-        gap: 10px;
-    }
-    .team-member {
-        margin: 0 8px;
-    }
-
-    /* Navigation: stack vertically if needed */
-    nav ul {
-        flex-direction: column;
-        gap: 8px;
-    }
 }

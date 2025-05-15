@@ -6,11 +6,15 @@ body, h1, h2, ul, li, p {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f9f9f9;
     color: #222;
     margin: 0;
     padding-top: 80px; /* space for fixed header */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
 /* Fixed top banner */
